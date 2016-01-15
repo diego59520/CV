@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="cv.js"></script>
+    </head>
+<body ng-app="curri" style="margin: 20px;">
+    <div>
+    <h3 style="text-decoration: underline;">
+        CV
+    </h3>
+    </div>
+    <div>
+        <div style="float: left; margin: 0px 160px 5px 0px;">
+            <p>
+            NOMBRE: Diego Javier P&eacute;rez Montiel
+            </p>
+            <p>
+            FECHA DE NACIMIENTO: 08 de Noviembre de 1991
+            </p>
+            <p>
+            RFC: PEMD911108L89  (en proceso)
+            </p>
+            <p>
+            RESIDENCIA ACTUAL: M&eacute;xico, D.F.
+            </p>
+            <p>
+            PROFESION: T&eacute;cnico Superior Universitario
+            </p>
+            <p>
+            ESTADO CIVIL: Soltero
+            </p>
+        </div>
+        <div>
+            <img src="face.jpg" alt="face" height="160" width="120">
+        </div>
+    </div>
+    <div class="table-responsive" ng-controller="ControladorEstudio">
+        <table class="table table-bordered">
+            <thead>
+            <tr class="info">
+            <th>
+                GRADO ACADEMICO
+            </th>
+            <th>
+                CARRERA
+            </th>
+            <th>
+                INSTITUCION
+            </th>
+            <th>
+                LUGAR
+            </th>
+            <th>
+                PERIODO
+            </th>
+            </tr>
+                </thead>
+            <tbody>
+            <tr ng-repeat="estudio in estudios">
+                <td>{{estudio.gacademico}}</td>
+                <td>{{estudio.carrera}}</td>
+                <td>{{estudio.institucion}}</td>
+                <td>{{estudio.lugar}}</td>
+                <td>{{estudio.periodo}}</td>
+            </tr>
+                </tbody>
+        </table>
+    </div>
+    <div class="table-responsive" ng-controller="ControladorExperiencia">
+        <table class="table table-bordered">
+            <thead>
+            <tr class="info">
+            <th>
+                COMPA&Ntilde;IA
+            </th>
+            <th>
+                AREA
+            </th>
+            <th>
+                POSICION
+            </th>
+            <th>
+                ACTIVIDADES
+            </th>
+            <th>
+                HERRAMIENTAS
+            </th>
+            <th>
+                PERIODO
+            </th>
+                </tr>
+                </thead>
+            <tbody>
+            <tr ng-repeat="experiencia in experiencias">
+                <td>{{experiencia.compania}}</td>
+                <td>{{experiencia.area}}</td>
+                <td>{{experiencia.posicion}}</td>
+                <td>{{experiencia.actividades}}</td>
+                <td>{{experiencia.herramientas}}</td>
+                <td>{{experiencia.periodo}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<html> 
+    
+    
